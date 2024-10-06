@@ -8,6 +8,10 @@ const url = 'https://u52dbydd62mejfze7eftbqnbyu0dunrd.lambda-url.us-east-1.on.aw
 
 app.use(cors());
 
+app.get('/', (req, res) => {
+    res.send('This is Jahvonni Wright Web Service');
+});
+
 app.get('/say', (req, res) => {
     axios.get(url + req.query.keyword)
         .then(function (response) {
